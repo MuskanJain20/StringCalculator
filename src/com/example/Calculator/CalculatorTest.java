@@ -39,4 +39,9 @@ public class CalculatorTest {
         assertEquals("Negatives not allowed",ex.getMessage());
     }
 
+    @Test
+    public void add_returnsVal_whenNumberGreaterThanThousand(){
+        assertEquals(2,calculator.add("1001,2"));
+    }
+
 }
