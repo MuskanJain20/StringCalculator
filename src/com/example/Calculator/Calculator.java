@@ -15,7 +15,7 @@ public class Calculator {
             delimiter = Pattern.quote(numbers.substring(2,end));
             numbers = numbers.substring(end+1);
         }
-        
+
         String[] parts = numbers.split(delimiter);
         int sum = 0;
         for(String part : parts){            // whenTwoNumbers
