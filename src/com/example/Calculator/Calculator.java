@@ -18,11 +18,17 @@ public class Calculator {
 
         String[] parts = numbers.split(delimiter);
         int sum = 0;
-        for(String part : parts){            // whenTwoNumbers
-            if(Integer.parseInt(part)<0){
+        for(String part : parts){ // whenTwoNumbers
+            int val = Integer.parseInt(part);
+            if(val<0){
                 throw new IllegalArgumentException("Negatives not allowed");  // throwsError_whenNegativeNumbers
             }
-            sum+= Integer.parseInt(part);
+            else if(val>1000){
+                sum+=0;
+            }
+            else {
+                sum += val;
+            }
         }
         return sum;
     }
