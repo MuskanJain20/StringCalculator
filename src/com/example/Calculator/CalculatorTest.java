@@ -20,7 +20,7 @@ public class CalculatorTest {
 
     @Test
     public void add_returnsVal_whenTwoNumbers(){
-        assertEquals(6,"1,5");
+        assertEquals(6,calculator.add("1,5"));
     }
 
 }
