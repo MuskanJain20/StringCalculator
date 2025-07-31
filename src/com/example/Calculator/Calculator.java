@@ -19,6 +19,9 @@ public class Calculator {
         String[] parts = numbers.split(delimiter);
         int sum = 0;
         for(String part : parts){            // whenTwoNumbers
+            if(Integer.parseInt(part)<0){
+                throw new IllegalArgumentException("Negatives not allowed");  // throwsError_whenNegativeNumbers
+            }
             sum+= Integer.parseInt(part);
         }
         return sum;
