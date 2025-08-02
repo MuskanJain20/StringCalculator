@@ -23,7 +23,7 @@ public class Calculator {
             if(val<0){
                 throw new IllegalArgumentException("Negatives not allowed");  // throwsError_whenNegativeNumbers
             }
-            else if(val>1000){
+            else if(val>1000){  // returnsVal_whenNumberGreaterThanThousand
                 sum+=0;
             }
             else {

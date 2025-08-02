@@ -44,4 +44,18 @@ public class CalculatorTest {
         assertEquals(2,calculator.add("1001,2"));
     }
 
+    @Test
+    public void add_returnsValue_whenMultipleDelimitersAnyLength() {
+        assertEquals(10, calculator.add("//[***][%%][#]\n1***2%%3#4"));
+    }
+
+    @Test
+    public void add_returnsVal_whenSingleDelimiterWithBrackets() {
+        assertEquals(6, calculator.add("//[;;]\n1;;2;;3"));
+    }
+
+    @Test
+    public void add_returnsVal_whenSingleCharCustomDelimiter() {
+        assertEquals(3, calculator.add("//;\n1;2"));
+    }
 }
